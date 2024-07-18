@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Costos de Productos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1 class="titulo">Simulador de Costos de Productos</h1>
+        <div class="card">
+            <div class="form-group">
+                <input type="text" id="nombre-producto" class="form-control" placeholder="Nombre del Producto">
+            </div>
+            <div class="form-group">
+                <input type="number" id="precio-producto" class="form-control" placeholder="Precio del Producto">
+            </div>
+            <button id="guardar-producto" class="btn">Guardar Producto</button>
+        </div>
+        <div class="card">
+            <h2>Lista de Productos</h2>
+            <div id="lista-productos" class="list-group"></div>
+        </div>
+        <div class="card">
+            <h2>Productos Seleccionados</h2>
+            <div id="productos-seleccionados" class="list-group"></div>
+            <button id="calcular-costo" class="btn">Calcular Costo Total</button>
+        </div>
+        <h2 id="costo-total" class="costo-total">Costo Total: $0</h2>
+        <div id="mensaje" class="mensaje"></div>
+    </div>
+
+    <div id="costoTotalModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p id="costoTotalMensaje"></p>
+        </div>
+    </div>
+    <script src="js/index.js"></script>
+</body>
+</html>
